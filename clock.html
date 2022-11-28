@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock </title>
+    <link rel="stylesheet" type="text/css" href="clock1.css">
+</head>
+<body>
+
+
+    <div class="hand">
+        <div id="short">00</div>
+        <div id="long">00</div>
+        <div id="fast">00</div>
+        <div id="ampm">AM</div>
+    </div>
+
+    <script>
+
+        setInterval(() =>{
+    let short = document.getElementById('short')
+    let long = document.getElementById('long')
+    let fast = document.getElementById('fast')
+    let ampm = document.getElementById('ampm')
+
+    let s = new Date().getHours();
+    let l = new Date().getMinutes();
+    let f = new Date().getSeconds();
+    let am = s >= 12 ? "PM" : "AM";
+
+    short.innerHTML = s;
+    long.innerHTML = l;
+    fast.innerHTML = f;
+    ampm.innerHTML = am;
+ 
+    
+        })
+
+
+    </script>
+   
+
+</body>
+</html>
